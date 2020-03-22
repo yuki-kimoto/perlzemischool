@@ -5,43 +5,129 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    -webkit-text-size-adjust:100%;
   }
   a, a:visited {
-    color:#0000EE;
+    color:#0055FF;
+    cursor:pointer;
+    text-decoration:none;
   }
   
   /* header */
   .header {
+    background:white;
+    border-bottom:5px solid #009D82;
+  }
+  .header-inner {
+    width:100%;
     margin:0 auto;
-    background:#fff;
-    margin-bottom:15px;
-    border-bottom:5px solid #D9D9D9;
+    padding:5px 10px;
+  }
+  .header-inner:after {
+    content: "";
+    display:block;
+    clear:both;
+  }
+  .header-left {
+    float:left;
+    width:66%;
+  }
+  .header-right {
+    float:left;
+    width:34%;
+  }
+  .header-title {
+    float:left;
+    padding-top:5px;
+    padding-left:5px;
+  }
+  .header-title a {
+    padding:5px 0px 6px 0px;
+    display:inline-block;
+    color:#122;
+    font-size:17px;
+    text-decoration:none;
+    font-weight:bold;
+  }
+  .header-menu {
+    text-align:center;
+    padding-top:0px;
+    list-style:none;
+  }
+  .header-menu:aflter {
+    content "";
+    display:block;
+    clear:both;
+  }
+  .header-menu li {
+    float:left;
+    width:calc(50% - 5px);
+    margin-right:5px;
+  }
+  .header-menu a {
+    display:block;
+    width:100%;
+    font-size:15px;
+    text-decoration:none;
+    color:#444;
+    margin-right:18px;
+    background:white;
+    padding: 5px 0 5px 0;
+    background:#D82E5D;
+    color:white;
+    border-radius:5px;
+    text-decoration:none;
+    padding:10px 0 8px 0;
+  }
+  
+  .menu-button {
+    display:none;
   }
   
   /* footer */
   .footer {
-    background:#1A1A1A;
-    margin-top:15px;
-    text-align:center;
-    padding:15px 0;
-    border-top:1px solid #ccc;
+    margin-top:30px;
+  }
+  .footer img {
+    width:105px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
   }
   .footer a, .footer a:visited {
     color:white;
+    display:block;
+    height:100%;
+    padding:28px 0 25px 0;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    text-align:center;
+    background:#2E75B6;
+    letter-spacing:1px;
+    font-size:18px;
+    cursor:pointer;
+  }
+  .footer a:hover {
+    opacity:0.8;
+  }
+  .footer .copyright {
+    background:white;
+    color:#333;
+    padding:9px 0 8px 0;
+    font-size:14px;
+    text-align:center;
   }
   
   /* container */
   .container {
-    background:#F2EFE;
   }
   
   /* main */
   .main {
-    max-width:960px;
+    max-width:860px;
     width:100%;
-    margin: 0 auto;
-    padding:0 5px;
+    margin: 0 auto 15px auto;
   }
   .main:after {
     content:"";
@@ -52,13 +138,17 @@
   /* content */
   .content {
     float:left;
-    width:calc(100% - 280px - 30px);
+    width:100%;
   }
   
   /* entry */
   .entry {
+    border:1px solid #20C7AB;
     background:white;
+    padding:15px 30px;
     margin-bottom:10px;
+    border-radius:4px;
+    margin-top:15px;
   }
   .entry li {
     margin-left:25px;
@@ -68,58 +158,58 @@
   /* side */
   .side {
     float:left;
-    width:280px;
-    margin-left:30px;
-    padding-top:16px;
+    width:100%;
+    margin-left:1%;
+    display:none;
   }
   
   /* tags */
   h1 {
-    max-width:1020px;
+    max-width:860px;
     width:100%;
-    font-size:28px;
-    padding:19px 10px 15px 73px;
-    background:url(/images/giblog-logo.png) no-repeat 10px 15px;
-    background-size:48px;
+    font-size:30px;
+    padding:12px 10px 10px 13px;
+    margin: 0 auto;
+  }
+  .site-description {
+    max-width:860px;
+    width:100%;
+    margin: 0 auto;
+    padding:0px 15px 15px 15px;
   }
   h1 a, h1 a:visited {
-    color:white;
     text-decoration:none;
-    color:#333;
+    color:#0f213d;
   }
   h2 {
-    font-size:24px;
-    margin:10px 0;
-    padding-left:20px;
-    letter-spacing:0.5px;
-    border-left:8px solid #00A78C;
+    font-size:29px;
+    padding:10px 0;
+    letter-spacing:2px;
   }
   h2 a, h2 a:visited {
     text-decoration:none;
-    color:#000;
+    color:white;
   }
   h3 {
-    font-size:20px;
-    border-top:4px solid #ddd;
-    padding:16px 0px 15px 18px;
-    letter-spacing:0.5px;
-    margin:15px 0 10px 0;
-    background:#F5F5F5;
-    margin-top:30px;
+    font-size:22px;
+    border-left:7px solid #00977B;
+    padding:6px 0px 4px 12px;
+    letter-spacing:1.5px;
+    margin:30px auto 10px auto;
   }
   h4 {
-    font-size:20px;
+    font-size:17px;
     font-weight:bold;
     padding:6px 0px 4px 5px;
     letter-spacing:0.5px;
-    margin:15px 0 18px 0;
-    border-bottom:dashed 1px #ddd;
+    margin:15px 0 10px 0;
   }
   p {
     font-size:16px;
     color:#111;
     margin:10px 0;
     line-height:1.5;
+    padding:0 15px;
   }
   pre {
     font-size:16px;
@@ -149,13 +239,18 @@
   table th {
     border:1px solid #ddd;
     padding:7px;
-    background:#eee;
+    background:#efe;
     font-weight:bold;
   }
 
   table td {
     border:1px solid #ddd;
     padding:7px;
+  }
+  
+  table i {
+    color:green;
+    font-weight:bold;
   }
   
   /* advanced */
@@ -166,42 +261,412 @@
   .before-days {
     text-align:center;
   }
-  .side-list {
-    box-shadow: 0 0 3px rgba(0,0,0,.1);
+
+  /* メールフォーム */
+  .mail-form {
+    padding:10px 20px;
   }
-  .side-list-title {
-    background:#009D82;
-    color:white;
+  .mail-form-title {
     font-weight:bold;
-    padding: 12px 0px 10px 0px;
+    margin-bottom:3px;
+    letter-spacing:1px;
+  }
+  
+  .mail-form label {
+    margin-bottom:14px;
+    display:block;
+  }
+  .mail-form input {
+    width:90%;
+    max-width:500px;
+    padding:5px;
+    font-size:16px;
+  }
+  .mail-form textarea {
+    width:90%;
+    max-width:500px;
+    min-height:200px;
+  }
+  .mail-form button {
+    width:300px;
+    background:#D82E5D;
+    color:white;
+    border:none;
+    font-size:20px;
+    border-radius:10px;
+    margin-bottom:30px;
+    padding:10px 0 7px 0;
+    cursor:pointer;
+  }
+  .mail-form-success {
+    color:green;
+  }
+  .mail-form-errors {
+    color:red;
+  }
+  
+  .main {
+    max-width:100%;
+    margin:0;
+    padding:0;
+  }
+  .entry {
+    margin:0;
+    padding:0;
+    border:none;
+  }
+  .index-head {
     text-align:center;
-    border:1px solid #E5E5E5;
-    border-bottom:none;
+    background-color:#009D82;
+    padding:30px 0;
   }
-  .side-list ul {
-    border:1px solid #ccc;
+  .index-head img {
+    width:100%;
+    max-width:240px;
   }
-  .side-list li {
+  .index-head:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+
+  .index-head-title {
+    
+  }
+  .index-head h2 {
+    color:white;
+    font-size:38px;
+    letter-spacing:1.5px;
+    padding:0 10px;
+  }
+
+  .index-head-description {
+    padding:0 30px;
+    color:white;
+    font-size:22px;
+    letter-spacing:2px;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  
+  .index-inner {
+    max-width:860px;
+    width:100%;;
+    margin:0 auto -10px auto;
+    padding:0px 0 0px 0;
+  }
+
+  h3 {
+    font-size:24px;
+    letter-spacing:1.5px;
+    padding:0;
+    margin:0;
+    border:none;
+  }
+
+  .index-start {
+    margin:40px auto;
+    text-align:center;
+  }
+  .index-start a {
+    background:#D82E5D;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    padding:30px 40px;
+    width:90%;
+    max-width:500px;
+    font-size:20px;
+    font-weight:bold;
+  }
+  
+  a.link, a.link:visited {
+    color:blue;
+    text-decoration:none;
+  }
+  .footer {
+    margin-top:0;
+    border-top:0;
+  }
+  .index-courses {
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:40px;
+  }
+  .index-courses h3 {
+    color:#122;
+    font-size:28px;
+    margin:0px 0 20px 0;
+    text-align:center;
+    padding-top:60px;
+    padding-bottom:10px;
+    letter-spacing:2px;
+  }
+  .index-courses-description {
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:15px;
+    padding:0 25px;
+  }
+ 
+  .index-courses ul {
+    margin:0 auto;
+    width:93%;
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .index-courses li {
     list-style:none;
+    display:block;
+    float:left;
+    width:49%;
     background:white;
-    border-bottom:1px solid #E5E5E5;
-    padding:12px 0px 10px 15px;
+    margin-left:0.5%;
+    margin-right:0.5%;
+    margin-bottom:15px;
+    text-align:center;
+    border:1px solid #008f76;
   }
-  .side li:last-child {
-    border-bottom:none;
+  .index-courses a {
+    color:#333;
+    text-decoration:none;
+    display:block;
+    width:100%;
+    padding:10px 10px;
+  }
+  .index-courses-item-title {
+    font-weight:bold;
+    padding:11px 0 1px 0;
+    letter-spacing:1px;
+    font-size:18px;
+    margin-bottom:5px;
+  }
+  .index-courses-item-description {
+    padding:3px 6px;
+    color:#233;
+    line-height:1.8;
+  }
+  .index-courses-item-image {
+    background:#0eb094;
+  }
+  .index-courses-item-image img {
+    width:100%;
+  }
+  .index-features {
+    background:#dfe;
+    padding-bottom:50px;
+  }
+  .index-features h3 {
+    font-size:24px;
+    text-align:center;
+    padding:30px 5px 0 5px;
+    color:#202;
+  }
+  .index-features ul {
+    margin:0 auto;
+    margin:0 auto;
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .index-features li {
+    list-style:none;
+    display:block;
+    float:left;
+    width:41%;
+    margin-right:9%;
+    margin-bottom:5px;
+    text-align:center;
+    border-radius:8px;
+    text-align:left;
+    color:#202;
+  }
+  .index-features a {
+    display:block;
+    width:100%;
+    color:inherit;
+    text-decoration:none;
+    padding:23px 0 17px 40px;
+    font-weight:bold;
+    border-bottom:1px dotted green;
+  }
+  .index-features a:hover {
+  }
+  .index-sitemap {
+    margin-top:50px;
+    background:#dfe;
+    color:#202;
+    padding:20px;
+  }
+  .index-sitemap-inner {
+    width:860px;
+    margin:0 auto;
+  }
+  .index-sitemap-inner:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+  .index-sitemap-left {
+    float:left;
+    width:50%;
+  }
+  .index-sitemap-right {
+    float:left;
+    width:50%;
+  }
+  .index-sitemap ul {
+    color:#000;
+    margin:0 auto;
+    line-height:1.8;
+  }
+  .index-sitemap li {
+    list-style:none;
+  }
+  .index-sitemap a, .index-sitemap a:visited {
+    color:#111;
+    font-size:19px;
+    color:#202;
+  }
+
+  /* 会員登録 */
+  .signup {
+    
+  }
+  .signup-title {
+    font-weight:bold;
+    text-align:center;
+    font-size:18px;
+  }
+  .signup-block {
+    width:calc(100% - 15px);
+    max-width:500px;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:5px;
+  }
+  .signup-title {
+    
+  }
+  .signup input[type=text], .signup input[type=password] {
+    display:block;
+    width:calc(100% - 15px);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:12px;
+    margin-bottom:12px;
+    padding:8px 10px;
+    border-radius:3px;
+    border:1px solid #ddd;
+    font-size:16px;
+  }
+  .signup input[type=submit] {
+    display:block;
+    width:calc(50%);
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#D82E5D;
+    border:1px solid #D82E5D;
+    color:white;
+    padding:10px 0;
+    border-radius:5px;
+    display:block;
+    width:calc(50%);
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+    background:#D82E5D;
+    border:1px solid #D82E5D;
+    color:white;
+    padding:10px 0;
+    border-radius:5px;
+    cursor:pointer;
   }
 
 /* Tablet and Smart phone */
-@media only screen and (max-width:960px) {
+@media only screen and (max-width:860px) {
   .content {
     float:none;
-    width:97%;
+    width:100%;
     margin:0 auto;
-    margin-bottom:15px;
+    margin-bottom:0px;
+    border-radisu:0;
   }
   .side {
     float:none;
     width:97%;
     margin:0 auto;
+  }
+  .entry {
+    border:none;
+    margin-bottom:0px;
+    padding:10px 20px;
+    margin-top:0;
+  }
+  .container {
+    padding:0;
+  }
+  .header {
+    width:100%;
+    margin-bottom:0;
+    border-width:1px;
+    padding:0;
+  }
+  .footer {
+    margin-top:0px;
+  }
+  .main {
+    margin-bottom:0;
+  }
+
+  .index-inner {
+    width:98%;;
+    margin:0 auto -10px auto;
+    padding:0px 0 0px 0;
+  }
+  .index-features li {
+    width:100%;
+  }
+  .index-courses {
+  }
+  .index-courses li {
+    width:48%;
+    margin-right:1%;
+  }
+
+  .index-sitemap-inner {
+    width:100%;
+  }
+  .index-sitemap-left {
+    width:100%;
+  }
+  .index-sitemap-right {
+    width:100%;
+  }
+  .index-head-left {
+    width:100%;
+    padding:30px 5px 10px 5px;
+  }
+  .index-head-right {
+    width:100%;
+    padding:0;
+  }
+  .index-courses ul {
+    width:100%;
+  }
+  .index-courses li {
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  .index-features li {
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
   }
 }

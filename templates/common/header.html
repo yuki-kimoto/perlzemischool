@@ -1,6 +1,26 @@
 <!-- header -->
-<div class="main">
-  <h1>
-    <a href="/">Giblog Web Site</a>
-  </h1>
+<script>
+  $(document).ready(function () {
+    $(window).on('resize', function () {
+      var width = $(window).width();
+      
+      if (width > 860) {
+        $('.header-menu').show();
+      }
+    });
+  });
+</script>
+
+<div class="header-inner">
+  <div class="header-left">
+    <div class="header-title">
+      <a href="/"><span style="letter-spacing:2px;">Perlゼミ プログラミングスクール オンライン</a>
+    </div>
+  </div>
+  <div class="header-right">
+    <ul class="header-menu">
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe6ypMTx5XTh2KbsIgqgPMXNrC5Bo9FKRPVHM_o0jvrH_k28A/viewform" class="otoiawase" >フォーラム登録</a></li>
+      <li><a href="https://perlzemi.slack.com/" class="otoiawase" style="background-color:#009D82">ログイン</a></li>
+    </ul>
+  </div>
 </div>
